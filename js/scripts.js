@@ -8,11 +8,26 @@ function beepBoopFunction(num){
    var numberArray = [];
    for (var i = 0; i <= num; i ++){
      numberArray.push(i);
-   }
-   console.log(numberArray);
-   return numberArray;
+     var beep = "BEEP!";
 
-}
+
+   };
+
+   if (numberArray.includes(2)) {
+     console.log("numberArray");
+     return numberArray.replace(2 , beep)
+   }
+
+   return numberArray;
+   console.log(numberArray);
+
+
+   // var stringedArray = numberArray.toString();
+
+   // return numberArray;
+
+
+};
 
 
 
@@ -25,13 +40,8 @@ $(document).ready(function(){
     var userNumber = parseInt($("#formInput").val());
     var result = beepBoopFunction(userNumber);
 
-    var createList = function(result){
-
-    };
-
-
     // result.forEach(function(resultP){
-        // $("ul#outputUl").append("<li>" + result + "</li>");
+        $("ul#outputUl").append("<li>" + result + "</li>");
     // });
 
 
