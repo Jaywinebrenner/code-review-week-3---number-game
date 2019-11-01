@@ -8,21 +8,44 @@ function beepBoopFunction(num){
    var numberArray = [];
    for (var i = 0; i <= num; i ++){
      numberArray.push(i);
-     var beep = "BEEP!";
    };
 
-   var stringNumbers = numberArray.toString();
-   console.log(stringNumbers);
+   // var stringNumbers = numberArray.toString();
+   var sorry = "I'm sorry, Dave. I'm afraid I can't do that.";
 
-   if (stringNumbers.includes(2)) {
-      return  stringNumbers.replace(/2/g, "BEEP");
-        console.log(stringNumbers);
-   }
+   for (var i = 0; i <= numberArray.length; i ++){
+     if (numberArray.includes(3)) {
+        console.log(numberArray);
+        var numberArray = numberArray.splice(num, sorry);
+        console.log(numberArray);
+     }
+   };
 
 
 
-   console.log(stringNumbers);
 
+   // if (numberArray.includes(3)) {
+   //
+   //    var numberArray = numberArray.replace(3, sorry);
+   // }
+   //
+   // if (numberArray.includes(2)) {
+   //    var numberArray = numberArray.replace(2, "BOOP");
+   // }
+   //
+   // if (numberArray.includes(1)) {
+   //    var numberArray = numberArray.replace(1, "BEEP");
+   // }
+
+
+
+
+
+
+
+
+   console.log(numberArray);
+   return numberArray;
 
    // var stringedArray = numberArray.toString();
 
