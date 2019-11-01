@@ -5,10 +5,12 @@ function beepBoopFunction(num){
     return "Please enter a number that currently exists.";
   }
 
-   // var inputNumbers = [];
+   var numberArray = [];
    for (var i = 0; i <= num; i ++){
-     return i;
-     console.log(i);
+     numberArray.push(i);
+
+
+
      // inputNumbers += (i);
      // inputNumbers.split(" ");
      // inputNumbers.push(inputNumbers)
@@ -20,6 +22,8 @@ function beepBoopFunction(num){
 
 
    }
+   console.log(numberArray);
+   return numberArray;
 
 
 }
@@ -31,19 +35,13 @@ $(document).ready(function(){
     event.preventDefault();
 
     var userNumber = parseInt($("#formInput").val());
-
-
     var result = beepBoopFunction(userNumber);
+    result.forEach(function(resultP){
 
+    })
 
-      $("ul#outputUl").append("<li>" + result + "</li>");
-
-
-
-
-
-
-
+      $("ul#outputUl").html("<li>" + result + "</li>");
+        // $("p").html(result);
 
   });
 });
