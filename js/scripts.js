@@ -11,20 +11,17 @@ function beepBoopFunction(num){
      var beep = "BEEP!";
    };
 
-   var boopArray = ["BEEP!", "BOOP!", "I'm sorry, Dave. I'm afraid I can't do that."]
-   if (numberArray.includes(2)) {
-     for (var i = 0; i <= numberArray.length; i ++){
+   var stringNumbers = numberArray.toString();
+   console.log(stringNumbers);
 
-     };
-
-
-      // console.log(ele); [10,10,30,40,50]
-
-     console.log("there is a 2");
+   if (stringNumbers.includes(2)) {
+      return  stringNumbers.replace(/2/g, "BEEP");
+        console.log(stringNumbers);
    }
 
-   return numberArray;
-   console.log(numberArray);
+
+
+   console.log(stringNumbers);
 
 
    // var stringedArray = numberArray.toString();
