@@ -6,14 +6,13 @@ function beepBoopFunction(num){
   }
    var inputArray = [];
    for (var i = 0; i <= num; i++){
-     inputArray.push(num[i]);
-     console.log(inputArray);
+     alert(num)
+     inputArray.push(i);
+     return inputArray;
+     alert("sup")
 
    }
 
-
-  // for(var i = 0; i < sentenceSplit.length; i++){
-  //       outputArray.push(sentenceSplit[i].charAt(0).toUpperCase() + sentenceSplit[i].slice(1));
 
 
 }
@@ -25,9 +24,12 @@ $(document).ready(function(){
     event.preventDefault();
 
     var userNumber = parseInt($("#formInput").val());
-    var result= beepBoopFunction(userNumber);
+    var result = beepBoopFunction(userNumber);
 
-    $("ul#outputUl").append("<li>" + result + "</li>");
+
+      $("ul#outputUl").append("<li>" + result + "</li>");
+
+
 
   });
 });
