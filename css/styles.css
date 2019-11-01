@@ -9,7 +9,10 @@ h2{
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 80px;
+}
 
+input, textarea {
+  background-color : #fff4e4;
 }
 
 
