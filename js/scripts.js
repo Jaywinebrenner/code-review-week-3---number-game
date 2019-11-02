@@ -1,32 +1,31 @@
 
-function beepBoop(input){
+function beepBoop(userInput){
 
-  var outputArray = [];
+  var list = [];
 
-  if (isNaN(input)) {
+  if (isNaN(userInput)) {
     return "Please enter a real number, friend.";
   }
 
-  for (var i = 0; i <= input; i++){
+  for (var i = 0; i <= userInput; i++){
+    var replace = i;
 
-    var word = i;
+    if (i.toString().includes(1)){
+      replace = "Beep!";
 
-    if(i.toString().includes(1)) {
-      word = "BEEP";
     }
-    if(i.toString().includes(2)) {
-      word = "BOOP";
-    }
-    if(i.toString().includes(3)) {
-      word = "I'm sorry, Dave. I'm afraid I can't do that.";
-    }
+    if (i.toString().includes(2)) {
+      replace = "Boop!";
 
-    outputArray.push(word);
     }
-
-    return outputArray;
-
+    if (i.toString().includes(3)) {
+      replace = "I'm sorry, Dave. I'm afraid I can't do that.";
+    }
+    list.push(replace);
   }
+
+  return list;
+}
 
 $(document).ready(function(){
   $("form#input").submit(function(event){
@@ -34,11 +33,10 @@ $(document).ready(function(){
 
     var userNumber = parseInt($("#formInput").val());
     var result = beepBoop(userNumber);
-    console.log(result);
 
-    result.forEach(function(resultP){
-      $("ul#outputUl").append("<li>" + resultP + "</li>").slideDown("slow");
-    });
+      result.forEach(function(resultP){
+        $("ul#outputUl").append("<li>" + resultP + "</li>").slideDown("slow");
+      });
 
   });
 });
