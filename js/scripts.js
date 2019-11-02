@@ -1,3 +1,6 @@
+//
+// After a thoroughly demoralizing go on Friday, I had a breakthrough with loops and how they work. Also with arrays and toString() that really was a relief. I requested a meeting when I turned in the work at the 5o'clock deadline, but I feel as if I have it under control at this point. I am happy to meet, but not necessary as I know this class is packed.
+
 
 function beepBoop(userInput){
 
@@ -11,15 +14,15 @@ function beepBoop(userInput){
     var replace = i;
 
     if (i.toString().includes(1)){
-      replace = "Beep!";
+      var replace = "Beep!";
 
     }
     if (i.toString().includes(2)) {
-      replace = "Boop!";
+      var replace = "Boop!";
 
     }
     if (i.toString().includes(3)) {
-      replace = "I'm sorry, Dave. I'm afraid I can't do that.";
+      var replace = "I'm sorry, Dave. I'm afraid I can't do that.";
     }
     list.push(replace);
   }
