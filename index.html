@@ -12,20 +12,24 @@
 
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
     <div id="hContainer" class="container">
       <h1>BEEP! BOOP!</h1>
       <h2>Play the Beep, Boop game. Beep Boop yourself into a binary oblivion.</h2>
     </div>
-    <form id="input" action="index.html" method="post">
-      <input id="formInput" type="text">
-      <label>Enter Your Beep! Boop! number here:</label>
-      <button id="button" class="btn btn-secondary" type="submit" name="button">Submit!</button>
-    </form>
-    <ul id="outputUl">
+    <div class="container-fluid" id="outputWrapper">
+      <form id="input" action="index.html" method="post">
+        <input id="formInput" type="text">
+        <label>Enter Your Beep! Boop! number here:</label>
+        <button id="button" class="btn btn-secondary" type="submit" name="button">Submit!</button>
+      </form>
+      <ul id="outputUl">
 
-    </ul>
-    <p></p>
+      </ul>
+      <p></p>
+
+    </div>
+
   </div>
 
 

@@ -8,20 +8,31 @@ h2{
   color: #fff4e4;
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 80px;
+  padding-bottom: 15px;
+}
+#outputWrapper{
+ width: 1000px;
+}
+
+#hContainer{
+  height: 5%;
+  margin-bottom: 50px;
+  padding-bottom: 50;
 }
 
 input, textarea {
   background-color : #fff4e4;
 }
 
-
 body{
   background-color: #6f9a8d;
+
 }
+
 ul{
   color: #fff4e4;
   font-size: 1.3rem;
+  list-style-type:none;
 }
 
 label{
@@ -37,5 +48,4 @@ label{
   background-color: #ea5e5e;
   margin-top: 50px;
   border-radius: 3%
-
 }

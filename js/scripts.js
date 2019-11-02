@@ -36,7 +36,9 @@ $(document).ready(function(){
     var result = beepBoop(userNumber);
     console.log(result);
 
-      $("ul#outputUl").append("<li>" + result + "</li>");
+    result.forEach(function(resultP){
+      $("ul#outputUl").append("<li>" + resultP + "</li>").slideDown("slow");
+    });
 
   });
 });
