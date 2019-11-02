@@ -1,77 +1,42 @@
-//business logic
 
-function beepBoopFunction(num){
-  if (isNaN(num)){
-    return "Please enter a number that currently exists.";
+function beepBoop(input){
+
+  var outputArray = [];
+
+  if (isNaN(input)) {
+    return "Please enter a real number, friend.";
   }
 
-   var numberArray = [];
-   for (var i = 0; i <= num; i ++){
-     numberArray.push(i);
-   };
+  for (var i = 0; i <= input; i++){
 
-   // var stringNumbers = numberArray.toString();
-   var sorry = "I'm sorry, Dave. I'm afraid I can't do that.";
+    var word = i;
 
-   for (var i = 0; i <= numberArray.length; i ++){
-     if (numberArray.includes(3)) {
-        console.log(numberArray);
-        var numberArray = numberArray.splice(num, sorry);
-        console.log(numberArray);
-     }
-   };
+    if(i.toString().includes(1)) {
+      word = "BEEP";
+    }
+    if(i.toString().includes(2)) {
+      word = "BOOP";
+    }
+    if(i.toString().includes(3)) {
+      word = "I'm sorry, Dave. I'm afraid I can't do that.";
+    }
 
+    outputArray.push(word);
+    }
 
+    return outputArray;
 
-
-   // if (numberArray.includes(3)) {
-   //
-   //    var numberArray = numberArray.replace(3, sorry);
-   // }
-   //
-   // if (numberArray.includes(2)) {
-   //    var numberArray = numberArray.replace(2, "BOOP");
-   // }
-   //
-   // if (numberArray.includes(1)) {
-   //    var numberArray = numberArray.replace(1, "BEEP");
-   // }
-
-
-
-
-
-
-
-
-   console.log(numberArray);
-   return numberArray;
-
-   // var stringedArray = numberArray.toString();
-
-   // return numberArray;
-
-
-};
-
-
-
-
+  }
 
 $(document).ready(function(){
   $("form#input").submit(function(event){
     event.preventDefault();
 
     var userNumber = parseInt($("#formInput").val());
-    var result = beepBoopFunction(userNumber);
+    var result = beepBoop(userNumber);
+    console.log(result);
 
-    // result.forEach(function(resultP){
-        $("ul#outputUl").append("<li>" + result + "</li>");
-    // });
-
-
-
-        // $("p").html(result);
+      $("ul#outputUl").append("<li>" + result + "</li>");
 
   });
 });
